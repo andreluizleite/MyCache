@@ -1,0 +1,12 @@
+C:\Users\andre\source\repos\MyCache\FinbourneCache\obj\Debug\net6.0\FinbourneCache.csproj.AssemblyReference.cache
+C:\Users\andre\source\repos\MyCache\FinbourneCache\obj\Debug\net6.0\FinbourneCache.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\andre\source\repos\MyCache\FinbourneCache\obj\Debug\net6.0\FinbourneCache.AssemblyInfoInputs.cache
+C:\Users\andre\source\repos\MyCache\FinbourneCache\obj\Debug\net6.0\FinbourneCache.AssemblyInfo.cs
+C:\Users\andre\source\repos\MyCache\FinbourneCache\obj\Debug\net6.0\FinbourneCache.csproj.CoreCompileInputs.cache
+C:\Users\andre\source\repos\MyCache\FinbourneCache\bin\Debug\net6.0\FinbourneCache.deps.json
+C:\Users\andre\source\repos\MyCache\FinbourneCache\bin\Debug\net6.0\FinbourneCache.dll
+C:\Users\andre\source\repos\MyCache\FinbourneCache\bin\Debug\net6.0\FinbourneCache.pdb
+C:\Users\andre\source\repos\MyCache\FinbourneCache\obj\Debug\net6.0\FinbourneCache.dll
+C:\Users\andre\source\repos\MyCache\FinbourneCache\obj\Debug\net6.0\refint\FinbourneCache.dll
+C:\Users\andre\source\repos\MyCache\FinbourneCache\obj\Debug\net6.0\FinbourneCache.pdb
+C:\Users\andre\source\repos\MyCache\FinbourneCache\obj\Debug\net6.0\ref\FinbourneCache.dll
