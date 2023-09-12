@@ -1,13 +1,13 @@
 ﻿
 namespace FinbourneCache.Component
 {
-    public class Cache<TKey, TValue>
+    internal class CacheComponent<TKey, TValue> : ICacheComponent<TKey, TValue>
     {
         private readonly int _capacity;
         private readonly Dictionary<TKey, LinkedListNode<CacheItem>> _cacheMap;
         private readonly LinkedList<CacheItem> _cacheList;
 
-        public Cache(int capacity)
+        internal CacheComponent(int capacity)
         {
             if (capacity < 0)
                 throw new ArgumentOutOfRangeException("The Capacity shoud be positive.");
@@ -15,15 +15,14 @@ namespace FinbourneCache.Component
             _capacity = capacity;
             _cacheMap = new Dictionary<TKey, LinkedListNode<CacheItem>>(capacity);
             _cacheList = new LinkedList<CacheItem>();
-
         }
 
         public void Add(TKey key, TValue value)
         {
-            if(_cacheMap.Count >= _capacity)
+            if (_cacheMap.Count >= _capacity)
             {
                 Evict();
-             }
+            }
 
             var cacheItem = new CacheItem(key, value);
             var node = new LinkedListNode<CacheItem>(cacheItem);
