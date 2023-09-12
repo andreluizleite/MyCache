@@ -8,7 +8,7 @@ namespace FinbourneCacheTest
         public void Cache_Add_GetItem()
         {
             //Arrange
-            var cache = new FinbourneCache.Component.Cache<string, int>(3);
+            var cache = Factory.NewCacheComponent< string, int>(3);
 
             //Act
             cache.Add("one", 1);
@@ -23,7 +23,7 @@ namespace FinbourneCacheTest
         public void Cache_UpdateItem()
         {
             // Arrange
-            var cache = new FinbourneCache.Component.Cache<string, int>(2);
+            var cache = Factory.NewCacheComponent<string, int>(2);
 
             // Act
             cache.Add("one", 1);
@@ -41,7 +41,7 @@ namespace FinbourneCacheTest
         public void Cache_NotFound()
         {
             // Arrange
-            var cache = new FinbourneCache.Component.Cache<string, int>(3);
+            var cache = Factory.NewCacheComponent<string, int>(3);
 
             // Act & Assert
             Assert.False(cache.TryGet("nonexistent", out _));

@@ -14,7 +14,7 @@ namespace FinbourneCacheTest
         public void Cache_PerformanceTest()
         {
             const int capacity = 1000;
-            var cache = new Cache<int, string>(capacity);
+            var cache = Factory.NewCacheComponent<int, string>(capacity);
 
             // Populate the cache with 1000 items
             for (int i = 0; i < capacity; i++)
