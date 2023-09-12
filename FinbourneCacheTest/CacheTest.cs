@@ -44,7 +44,7 @@ namespace FinbourneCacheTest
             var cache = Factory.NewCacheComponent<string, int>(3);
 
             // Act & Assert
-            Assert.False(cache.TryGet("nonexistent", out _));
+            Assert.False(cache.TryGet("nonexistent", out var value));
         }
     }
 }
