@@ -14,7 +14,7 @@ namespace FinbourneCacheTest
         {
             // Arrange
             int capacity = 3;
-            var cache = Factory.NewCacheComponent<string, int>(capacity);
+            var cache = Factory.Instance.NewCacheComponent<int, string>(capacity);
             bool eventRaised = false;
 
             // Subscribe to the ItemEvicted event
@@ -24,10 +24,10 @@ namespace FinbourneCacheTest
             };
 
             // Act
-            cache.Add("Key1", 1);
-            cache.Add("Key2", 2);
-            cache.Add("Key3", 3);
-            cache.Add("Key4", 4); // it should trigger eviction, which in turn should raise the ItemEvicted event.
+            cache.Add(1, "Value1");
+            cache.Add(2, "Value2");
+            cache.Add(3, "Value3");
+            cache.Add(4, "Value4"); // it should trigger eviction, which in turn should raise the ItemEvicted event.
 
             // Assert
             Assert.True(eventRaised, "ItemEvicted event was not raised.");
