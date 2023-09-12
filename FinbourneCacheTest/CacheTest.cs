@@ -8,14 +8,14 @@ namespace FinbourneCacheTest
         public void Cache_Add_GetItem()
         {
             //Arrange
-            var cache = Factory.NewCacheComponent< string, int>(3);
+            var cache = Factory.Instance.NewCacheComponent<int, string>(1);
 
             //Act
-            cache.Add("one", 1);
+            cache.Add(1, "Value1");
 
             //Assert
-            Assert.True(cache.TryGet("one", out var value));
-            Assert.Equal(value, 1);
+            Assert.True(cache.TryGet(1, out var value));
+            Assert.Equal(value, "Value1");
 
         }
 
@@ -23,28 +23,28 @@ namespace FinbourneCacheTest
         public void Cache_UpdateItem()
         {
             // Arrange
-            var cache = Factory.NewCacheComponent<string, int>(2);
+            var cache = Factory.Instance.NewCacheComponent<int, string>(2);
 
             // Act
-            cache.Add("one", 1);
-            cache.Add("two", 2);
+            cache.Add(1, "Value1");
+            cache.Add(2, "Value2");
 
             // Update "one"
-            cache.Add("one", 10);
+            cache.Add(1, "Value3 updated");
 
             // Assert
-            Assert.True(cache.TryGet("one", out var value));
-            Assert.Equal(10, value);
+            Assert.True(cache.TryGet(1, out var value));
+            Assert.Equal("Value3 updated", value);
         }
 
         [Fact]
         public void Cache_NotFound()
         {
             // Arrange
-            var cache = Factory.NewCacheComponent<string, int>(3);
+            var cache = Factory.Instance.NewCacheComponent<int, string>(3);
 
             // Act & Assert
-            Assert.False(cache.TryGet("nonexistent", out var value));
+            Assert.False(cache.TryGet(1, out var value));
         }
     }
 }
